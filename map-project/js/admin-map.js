@@ -1,5 +1,5 @@
 // Initialize the map for admin
-const adminMap = L.map('map').setView([33., 35.2], 9.4);
+const adminMap = L.map('map').setView([33.1, 35.5], 9.4);
 
 // Add OpenStreetMap tile layer
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
