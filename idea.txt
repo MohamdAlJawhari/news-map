@@ -1,0 +1,9 @@
+The idea is: 
+A user can see a map containing news, markers on the map, and polygons on the map. When the user clicks on a marker it displays a report from a title of an event, the date of the event, images about the event, text, and maybe other information, all this in the sidebar.
+
+The admin enters the website by writing a specific URL to enter to login page and from this login to the edit-map page where no one except him can enter it and he can make the edit on the map. Admin had a map of the world; they could draw a polygon on the map and give each polygon a different color. Add a marker with different forms like a pen or flesh etc... This marker needs to fill a report containing questions like title, date, image, text, and an option to add other subtitles and mini text for the subtitles. All this information from the polygons to the markers and the information needs to be saved in a table with the coordination of the markers. 
+When anyone clicks on the marker, the report information is displayed on the sidebar. All the admin's work on the map needs to be saved and editable.
+Give me the steps of creating this website with no conflict between the steps and let's start building.
+The idea is very similar to these websites: 
+https://liveuamap.com/ 
+https://www.almanar.com.lb/yemen-map/ 
