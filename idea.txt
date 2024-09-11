@@ -5,5 +5,6 @@ The admin enters the website by writing a specific URL to enter to login page an
 When anyone clicks on the marker, the report information is displayed on the sidebar. All the admin's work on the map needs to be saved and editable.
 Give me the steps of creating this website with no conflict between the steps and let's start building.
 The idea is very similar to these websites: 
+https://deepstatemap.live/
 https://liveuamap.com/ 
 https://www.almanar.com.lb/yemen-map/ 
