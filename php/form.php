@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <form action="../index.php" id="note-form" method="post">
+    <form action="../admin.php" id="note-form" method="post">
         <h2>Enter Note Information</h2>
 
         <!-- Report Title -->
