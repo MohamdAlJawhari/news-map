@@ -7,6 +7,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+console.log('map.js is loaded');
+
 // Fetch markers from the server
 fetch('php/get-markers.php')
     .then(response => response.json())
@@ -33,3 +35,23 @@ fetch('php/get-markers.php')
         });
     })
     .catch(error => console.error('Error fetching markers:', error));
+
+// Fetch polygons from the server
+fetch('php/get-polygon.php')
+    .then(response => response.json())
+    .then(data => {
+        console.log('Polygons fetched:', data); // Add this line
+        data.forEach(polygon => {
+            // Extract the coordinates and convert them into Leaflet-friendly format
+            const latLngs = polygon.coordinates.map(coord => [coord.lat, coord.lng]);
+            console.log('LatLngs for polygon:', latLngs); // Add this line
+
+            // Add polygon to the map
+            const leafletPolygon = L.polygon(latLngs, { color: polygon.color })
+                .addTo(map)
+                .on('click', function () {
+                    alert(`Polygon: ${polygon.name}`);
+                });
+        });
+    })
+    .catch(error => console.error('Error fetching polygons:', error));
