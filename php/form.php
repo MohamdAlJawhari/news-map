@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="../css/form.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <form action="../admin.php" id="note-form" method="post">
+    <form action="admin.php" id="note-form" method="post">
         <h2>Enter Note Information</h2>
 
         <!-- Report Title -->
@@ -38,12 +37,12 @@
             <div class="select-items select-hide">
                 <div data-value="icon1"><img src="../icons/armor.png" alt="Icon 1"/> armor</div>
                 <div data-value="icon2"><img src="../icons/bomb.png" alt="Icon 2"/> bomb</div>
-                <div data-value="icon2"><img src="../icons/destroyed.png" alt="Icon 2"/> destroyed</div>
-                <div data-value="icon2"><img src="../icons/drone.png" alt="Icon 2"/> drone</div>
-                <div data-value="icon2"><img src="../icons/jet.png" alt="Icon 2"/> jet</div>
-                <div data-value="icon2"><img src="../icons/missile.png" alt="Icon 2"/> missile</div>
-                <div data-value="icon2"><img src="../icons/rocket.png" alt="Icon 2"/> rocket</div>
-                <div data-value="icon2"><img src="../icons/tank.png" alt="Icon 2"/> tank</div>
+                <div data-value="icon3"><img src="../icons/destroyed.png" alt="Icon 3"/> destroyed</div>
+                <div data-value="icon4"><img src="../icons/drone.png" alt="Icon 4"/> drone</div>
+                <div data-value="icon5"><img src="../icons/jet.png" alt="Icon 5"/> jet</div>
+                <div data-value="icon6"><img src="../icons/missile.png" alt="Icon 6"/> missile</div>
+                <div data-value="icon7"><img src="../icons/rocket.png" alt="Icon 7"/> rocket</div>
+                <div data-value="icon8"><img src="../icons/tank.png" alt="Icon 8"/> tank</div>
 
 
                 <!-- Add more items as needed -->

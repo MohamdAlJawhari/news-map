@@ -32,7 +32,7 @@ if ($stmt->num_rows > 0) {
     if (password_verify($pass, $hashed_password)) {
         // Start session and redirect to admin page
         $_SESSION['user_id'] = $user_id;
-        header("Location: ../admin.php");
+        header("Location: admin.php");
         exit();
     } else {
         echo "Invalid credentials";

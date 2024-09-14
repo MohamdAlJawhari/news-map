@@ -73,18 +73,6 @@ adminMap.on(L.Draw.Event.CREATED, function (event) {
     }
 });
 
-// visibility of the form when the button is clicked.
-document.getElementById("toggleFormBtn").addEventListener("click", function() {
-    var formContainer = document.getElementById("form-container");
-    if (formContainer.style.display === "none") {
-        formContainer.style.display = "block"; // Show the form
-        this.innerText = "Hide Form"; // Change button text
-    } else {
-        formContainer.style.display = "none"; // Hide the form
-        this.innerText = "Show Form"; // Change button text
-    }
-});
-
 // Handle edited layers
 adminMap.on('draw:edited', function (event) {
     const layers = event.layers;
@@ -127,3 +115,15 @@ function saveLayerToDatabase(data) {
     .then(data => console.log('Layer saved:', data))
     .catch(error => console.error('Error saving layer:', error));
 }
+
+// visibility of the form when the button is clicked.
+document.getElementById("toggleFormBtn").addEventListener("click", function() {
+    var formContainer = document.getElementById("form-container");
+    if (formContainer.style.display === "none") {
+        formContainer.style.display = "block"; // Show the form
+        this.innerText = "Hide Form"; // Change button text
+    } else {
+        formContainer.style.display = "none"; // Hide the form
+        this.innerText = "Show Form"; // Change button text
+    }
+});
