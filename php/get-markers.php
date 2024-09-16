@@ -1,7 +1,8 @@
 <?php
+header('Content-Type: application/json');
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "amka"; 
+$password = "securus"; 
 $dbname = "map_project";
 
 // Create connection
@@ -13,10 +14,10 @@ if ($conn->connect_error) {
 }
 
 // Query to get all markers
-$sql = "SELECT title, lat, lng FROM markers";
+$sql = "SELECT title, date, image_path, description, lat, lng, marker_type FROM markers";
 $result = $conn->query($sql);
 
-$markers = array();
+$markers = [];
 if ($result->num_rows > 0) {
     // Output data of each row
     while($row = $result->fetch_assoc()) {

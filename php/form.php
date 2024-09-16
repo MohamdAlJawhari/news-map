@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="admin.php" id="note-form" method="post">
+        <div class="form">
         <h2>Enter Note Information</h2>
 
         <!-- Report Title -->
@@ -53,7 +54,7 @@
          <div>
             <button type="submit" id="submit-note">Add Note</button>
          </div>
-        
+         </div>
     </form>
 
     <script src="../js/form.js"></script>

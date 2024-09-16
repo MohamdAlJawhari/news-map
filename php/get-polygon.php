@@ -1,7 +1,8 @@
 <?php
+header('Content-Type: application/json');
 $servername = "localhost";
-$username = "root";
-$password = "";
+$username = "amka";
+$password = "securus";
 $dbname = "map_project";
 
 // Create connection
@@ -9,25 +10,21 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die(json_encode(["status" => "error", "message" => "Connection failed: " . $conn->connect_error]));
 }
 
 // Query to get all polygons
-$sql = "SELECT id, name, color, coordinates FROM polygons";
+$sql = "SELECT name, coordinates, color, marker_type FROM polygons";
 $result = $conn->query($sql);
 
-$polygons = array();
+$polygons = [];
 if ($result->num_rows > 0) {
-    // Output data of each row
-    while($row = $result->fetch_assoc()) {
-        // Decode the JSON coordinates into a PHP array
-        $row['coordinates'] = json_decode($row['coordinates']);
+    while ($row = $result->fetch_assoc()) {
+        $row['coordinates'] = json_decode($row['coordinates'], true);
         $polygons[] = $row;
     }
 }
 
-// Return the polygons as JSON
-echo json_encode($polygons);
-
 $conn->close();
+echo json_encode($polygons);
 ?>

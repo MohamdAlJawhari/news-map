@@ -3,8 +3,8 @@
 
 $host = 'localhost';
 $dbname = 'map_project';
-$username = 'root';
-$password = '';
+$username = 'amka';
+$password = 'securus';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
