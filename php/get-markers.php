@@ -1,8 +1,8 @@
 <?php
 header('Content-Type: application/json');
 $servername = "localhost";
-$username = "amka"; 
-$password = "securus"; 
+$username = "root"; 
+$password = ""; 
 $dbname = "map_project";
 
 // Create connection

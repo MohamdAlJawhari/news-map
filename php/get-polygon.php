@@ -1,8 +1,7 @@
 <?php
-header('Content-Type: application/json');
 $servername = "localhost";
-$username = "amka";
-$password = "securus";
+$username = "root"; 
+$password = ""; 
 $dbname = "map_project";
 
 // Create connection
@@ -10,7 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die(json_encode(["status" => "error", "message" => "Connection failed: " . $conn->connect_error]));
+    die("Connection failed: " . $conn->connect_error);
 }
 
 // Query to get all polygons
